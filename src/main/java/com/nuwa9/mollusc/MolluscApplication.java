@@ -1,4 +1,4 @@
-package com.mlin9.mollusc;
+package com.nuwa9.mollusc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

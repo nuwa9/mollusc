@@ -1,4 +1,4 @@
-package com.mlin9.mollusc;
+package com.nuwa9.mollusc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
