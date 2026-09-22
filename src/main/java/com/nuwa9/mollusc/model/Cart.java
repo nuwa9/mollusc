@@ -10,62 +10,62 @@ import java.util.UUID;
 @Table(name = "carts")
 public class Cart {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "id", updatable = false, nullable = false)
-    private UUID id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.UUID)
+  @Column(name = "id", updatable = false, nullable = false)
+  private UUID id;
 
-    private UUID userId;
+  private UUID userId;
 
-    private UUID productId;
+  private UUID productId;
 
-    @Min(1)
-    @Max(value = 255)
-    private int quantity;
+  @Min(1)
+  @Max(value = 255)
+  private int quantity;
 
-    public UUID getId() {
-        return id;
-    }
+  public UUID getId() {
+    return id;
+  }
 
-    public UUID getUserId() {
-        return userId;
-    }
+  public UUID getUserId() {
+    return userId;
+  }
 
-    public void setUserId(UUID userId) {
-        this.userId = userId;
-    }
+  public void setUserId(UUID userId) {
+    this.userId = userId;
+  }
 
-    public UUID getProductId() {
-        return productId;
-    }
+  public UUID getProductId() {
+    return productId;
+  }
 
-    public void setProductId(UUID productId) {
-        this.productId = productId;
-    }
+  public void setProductId(UUID productId) {
+    this.productId = productId;
+  }
 
-    public int getQuantity() {
-        return quantity;
-    }
+  public int getQuantity() {
+    return quantity;
+  }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+  public void setQuantity(int quantity) {
+    this.quantity = quantity;
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
 
-        Cart cart = (Cart) o;
+    Cart cart = (Cart) o;
 
-        return id.equals(cart.getId()) &&
-                userId.equals(cart.getUserId()) &&
-                productId.equals(cart.getProductId()) &&
-                quantity == cart.getQuantity();
-    }
+    return id.equals(cart.getId()) &&
+        userId.equals(cart.getUserId()) &&
+        productId.equals(cart.getProductId()) &&
+        quantity == cart.getQuantity();
+  }
 
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
-    }
+  @Override
+  public int hashCode() {
+    return getClass().hashCode();
+  }
 }
