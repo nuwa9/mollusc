@@ -23,7 +23,11 @@ public class CategoryService {
     return categoryRepository.findById(id);
   }
 
-  public Optional<Category> findByName(String name) {
+  public List<Category> findByParentCategoryId(UUID id) {
+    return categoryRepository.findByParentCategoryId(id);
+  }
+
+  public List<Category> findByName(String name) {
     return categoryRepository.findByName(name);
   }
 
